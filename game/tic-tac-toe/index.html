@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe vs Bot</title>
+  <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+    
+    <div class="difficulty-control">
+      <div class="difficulty-label">Bot Mode</div>
+      <input type="range" id="difficulty-slider" class="difficulty-slider" min="1" max="3" value="2" step="1">
+      <div class="difficulty-display">
+        <span>Easy</span>
+        <span>Medium</span>
+        <span>Hard</span>
+      </div>
+      <div class="current-difficulty" id="current-difficulty">Medium</div>
+    </div>
+    
+    <div class="score-board">
+      <div class="score-section">
+        <div class="score-title">Player (X)</div>
+        <div class="score-current" id="player-score">0</div>
+        <div class="score-best">Best: <span id="player-best">0</span></div>
+      </div>
+      <div class="score-section">
+        <div class="score-title">Bot (O)</div>
+        <div class="score-current" id="bot-score">0</div>
+        <div class="score-best">Best: <span id="bot-best">0</span></div>
+      </div>
+    </div>
+    
+    <div class="status" id="status">Your Turn (X)</div>
+    
+    <div class="game-board" id="board">
+      <div class="cell" data-cell-index="0"></div>
+      <div class="cell" data-cell-index="1"></div>
+      <div class="cell" data-cell-index="2"></div>
+      <div class="cell" data-cell-index="3"></div>
+      <div class="cell" data-cell-index="4"></div>
+      <div class="cell" data-cell-index="5"></div>
+      <div class="cell" data-cell-index="6"></div>
+      <div class="cell" data-cell-index="7"></div>
+      <div class="cell" data-cell-index="8"></div>
+    </div>
+    
+    <button class="btn" id="replay">Play Again</button>
+  </div>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>
