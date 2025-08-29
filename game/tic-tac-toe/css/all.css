@@ -1,0 +1,228 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background-color: #2d2d2d;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      border: 1px solid #404040;
+    }
+    
+    h1 {
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+    
+    .difficulty-control {
+      margin-bottom: 20px;
+      background-color: #3a3a3a;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #505050;
+    }
+    
+    .difficulty-label {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    
+    .difficulty-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      background: #555555;
+      outline: none;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    .difficulty-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #4CAF50;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    
+    .difficulty-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #4CAF50;
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+    }
+    
+    .difficulty-display {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    
+    .current-difficulty {
+      font-size: 1rem;
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    
+    .score-board {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+    
+    .score-section {
+      flex: 1;
+      background-color: #3a3a3a;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #505050;
+    }
+    
+    .score-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    
+    .score-current {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+    
+    .score-best {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-top: 5px;
+    }
+    
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .cell {
+      background-color: #404040;
+      border-radius: 10px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: white;
+      cursor: pointer;
+      border: 2px solid #555555;
+    }
+    
+    .cell:hover {
+      background-color: #4a4a4a;
+      border-color: #666666;
+    }
+    
+    .cell.x {
+      color: #ff6b6b;
+    }
+    
+    .cell.o {
+      color: #4ecdc4;
+    }
+    
+    .cell.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    
+    .status {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #3a3a3a;
+      color: white;
+      font-weight: bold;
+      border: 1px solid #505050;
+    }
+    
+    .status.win {
+      background-color: #2e7d32;
+      border-color: #4caf50;
+    }
+    
+    .status.lose {
+      background-color: #c62828;
+      border-color: #f44336;
+    }
+    
+    .status.draw {
+      background-color: #ef6c00;
+      border-color: #ff9800;
+    }
+    
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      border: 2px solid #45a049;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+      border-color: #3d8b40;
+    }
+    
+    .btn:active {
+      background-color: #3d8b40;
+    }
+    
+    @media (max-width: 500px) {
+      .cell {
+        height: 80px;
+        font-size: 2.5rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .score-current {
+        font-size: 1.3rem;
+      }
+      
+      .container {
+        padding: 20px;
+      }
+   }
